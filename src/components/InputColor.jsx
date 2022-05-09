@@ -1,11 +1,15 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { ChromePicker } from "react-color";
+import { InputContext } from "./context/Context";
 
 const InputColor = () => {
   const [color, setColor] = useState("#000000");
   const [displayColorPicker, setDisplayColorPicker] = useState(false);
+  const {inputValue, setInputValue} = useContext(InputContext);
 
-  useEffect(() => {}, [color]);
+  useEffect(() => {
+    setInputValue({...inputValue, color: color})
+  }, [color]);
 
   const handleChange = (e) => {
     setColor(e.hex);
@@ -24,11 +28,11 @@ const InputColor = () => {
         <span>{color}</span>
       </div>
 
-      {displayColorPicker && (
+      {/* {displayColorPicker && ( */}
         <div className="absolute mt-2">
           <ChromePicker color={color} onChange={handleChange} />
         </div>
-      )}
+      {/* )} */}
     </div>
   );
 };

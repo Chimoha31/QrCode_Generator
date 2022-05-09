@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
+import { InputContext } from "./context/Context";
 import InputColor from "./InputColor";
 import InputForm from "./InputForm";
 
 const Form = () => {
-  const handleClick = () => {
+  const {inputValue, getQrCode} = useContext(InputContext);
 
+  const handleClick = () => {
+    getQrCode();
   };
 
   return (
