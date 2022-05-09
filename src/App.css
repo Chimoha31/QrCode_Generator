@@ -1,7 +1,6 @@
 .base_background1 {
   position: relative;
   height: 100vh;
-  background: rgb(48, 48, 51);
   background: radial-gradient(
     circle,
     rgba(51, 51, 48, 0.963) 17%,

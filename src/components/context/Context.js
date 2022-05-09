@@ -1,2 +1,3 @@
+import React from 'react';
 
-const InputContext = React.createContext();
+export const InputContext = React.createContext();
