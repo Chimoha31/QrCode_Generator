@@ -1,11 +1,15 @@
-import './App.css';
+import React from 'react';
+import Form from './components/Form';
+import QrCode from './components/QrCode';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
- 
+    <div>
+      <Form />
+      <QrCode />
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
+
