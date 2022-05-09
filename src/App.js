@@ -1,5 +1,5 @@
-import axios from "axios";
 import React, { useState } from "react";
+import axios from "axios";
 import "./App.css";
 import { InputContext } from "./components/context/Context";
 import Form from "./components/Form";
@@ -7,13 +7,14 @@ import QrCode from "./components/QrCode";
 
 const App = () => {
   const [resUrl, setResUrl] = useState("");
-
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
   const [inputValue, setInputValue] = useState({
     color: "",
     url: "",
   });
 
-// API -----------------------------------
+  // API -----------------------------------
   const config = {
     headers: { Authorization: `Bearer ${process.env.REACT_APP_API_KEY}` },
   };
@@ -26,23 +27,28 @@ const App = () => {
 
   const getQrCode = async () => {
     try {
+      setLoading(true);
       const res = await axios.post(
         "https://qrtiger.com/api/qr/static",
         bodyParameters,
         config
       );
-      setResUrl(res.data.url)
+      setResUrl(res.data.url);
     } catch (e) {
+      setError(e);
     } finally {
+      setLoading(false);
     }
   };
-  // getQrCode();
-// -----------------------------------------------
+
+  // -----------------------------------------------
   const value = {
     inputValue,
     setInputValue,
     resUrl,
-    getQrCode
+    getQrCode,
+    error,
+    loading,
   };
 
   return (

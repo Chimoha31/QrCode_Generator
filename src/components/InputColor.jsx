@@ -5,10 +5,10 @@ import { InputContext } from "./context/Context";
 const InputColor = () => {
   const [color, setColor] = useState("#000000");
   const [displayColorPicker, setDisplayColorPicker] = useState(false);
-  const {inputValue, setInputValue} = useContext(InputContext);
+  const { inputValue, setInputValue } = useContext(InputContext);
 
   useEffect(() => {
-    setInputValue({...inputValue, color: color})
+    setInputValue({ ...inputValue, color: color });
   }, [color]);
 
   const handleChange = (e) => {
@@ -23,16 +23,16 @@ const InputColor = () => {
         <div
           className="w-10 h-8 cursor-pointer border-4"
           style={{ backgroundColor: color }}
-          // onClick={setDisplayColorPicker(!displayColorPicker)}
+          onClick={() => setDisplayColorPicker(!displayColorPicker)}
         ></div>
         <span>{color}</span>
       </div>
 
-      {/* {displayColorPicker && ( */}
+      {displayColorPicker && (
         <div className="absolute mt-2">
           <ChromePicker color={color} onChange={handleChange} />
         </div>
-      {/* )} */}
+      )}
     </div>
   );
 };
