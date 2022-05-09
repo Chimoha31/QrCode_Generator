@@ -1,4 +1,11 @@
-.App {
-  text-align: center;
+.base_background1 {
+  position: relative;
+  height: 100vh;
+  background: rgb(48, 48, 51);
+  background: radial-gradient(
+    circle,
+    rgba(51, 51, 48, 0.963) 17%,
+    rgba(93, 80, 90, 0.9150253851540616) 47%,
+    rgba(22, 21, 20, 0.794) 79%
+  );
 }
-

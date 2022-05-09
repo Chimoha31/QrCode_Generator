@@ -4,8 +4,7 @@ import InputForm from './InputForm'
 
 const Form = () => {
   return (
-    <div>
-      Form
+    <div className="grid gap-4 col-span-2 p-6"> 
       <InputForm />
       <InputColor />
     </div>
