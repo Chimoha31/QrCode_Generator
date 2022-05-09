@@ -3,17 +3,16 @@ import InputColor from "./InputColor";
 import InputForm from "./InputForm";
 
 const Form = () => {
-  
-  const handleClick= () => {
+  const handleClick = () => {
 
-  }
+  };
 
   return (
     <div className="grid gap-4 col-span-2 p-6">
       <InputForm />
       <InputColor />
       <button
-        className="bg-blue-400 hover:bg-blue-500 text-white py-2 px-4 rounded-sm max-w-sm ml-auto"
+        className="bg-blue-300 max-w-xs ml-auto px-4 py-1 text-white rounded-sm mt-4 hover:bg-blue-400 cursor-pointer"
         onClick={handleClick}
       >
         Generate QrCode

@@ -5,9 +5,7 @@ const InputColor = () => {
   const [color, setColor] = useState("#000000");
   const [displayColorPicker, setDisplayColorPicker] = useState(false);
 
-  useEffect(() => {
-
-  }, [color]);
+  useEffect(() => {}, [color]);
 
   const handleChange = (e) => {
     setColor(e.hex);

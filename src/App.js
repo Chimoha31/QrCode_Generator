@@ -6,9 +6,10 @@ import QrCode from "./components/QrCode";
 
 const App = () => {
   const [inputValue, setInputValue] = useState({
-    url: "",
     color: "",
   });
+
+  
 
   const value = {
     inputValue,
