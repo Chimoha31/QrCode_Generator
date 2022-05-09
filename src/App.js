@@ -53,7 +53,8 @@ const App = () => {
 
   return (
     <div className="base_background1 flex flex-col justify-center items-center">
-      <div className="container max-auto max-w-4xl bg-white rounded-md shadow-lg shadow-gray-700">
+      <h1 className="text-6xl mb-10 title">QrCode Generator</h1>
+      <div className="container max-auto max-w-4xl bg-white rounded-md shadow-lg shadow-gray-400">
         <div className="md:grid md:grid-cols-3">
           <InputContext.Provider value={value}>
             <Form />
