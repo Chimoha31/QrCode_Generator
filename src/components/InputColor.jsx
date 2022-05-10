@@ -9,6 +9,7 @@ const InputColor = () => {
 
   useEffect(() => {
     setInputValue({ ...inputValue, color: color });
+    // eslint-disable-next-line
   }, [color]);
 
   const handleChange = (e) => {

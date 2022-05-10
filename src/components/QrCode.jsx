@@ -39,7 +39,7 @@ const QrCode = () => {
           </button>
         </div>
       ) : (
-        <div>QrCode will showing here</div>
+        <div>QrCode will show here</div>
       )}
     </div>
   );

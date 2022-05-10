@@ -14,7 +14,7 @@ const InputForm = () => {
       <input
         type="url"
         className="border-2 w-full py-1 px-3"
-        placeholder="https://ezample.com"
+        placeholder="https://example.com"
         value={inputValue.url}
         onChange={handleChange}
       />
